@@ -8,6 +8,7 @@
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.2/dist/cdn.min.js" defer></script>
     <title>Nike Store</title>
 </head>
 
@@ -130,11 +131,11 @@
         <div class="payment">
             <h1 class="payTitle">Personal Information</h1>
             <label>Name and Surname</label>
-            <input type="text" placeholder="John Doe" class="payInput">
+            <input type="text" placeholder="john doe" class="payInput">
             <label>Phone Number</label>
-            <input type="text" placeholder="+1 234 5678" class="payInput">
+            <input type="text" placeholder="+254 234 5678" class="payInput">
             <label>Address</label>
-            <input type="text" placeholder="Elton St 21 22-145" class="payInput">
+            <input type="text" placeholder="nairobi 232 2333" class="payInput">
             <h1 class="payTitle">Card Information</h1>
             <div class="cardIcons">
                 <img src="./img/visa.png" width="40" alt="" class="cardIcon">
@@ -236,7 +237,9 @@
                 </div>
             </div>
             <div class="footerRightMenu">
-                <span class="copyright">@Lama Dev. All rights reserved. 2022.</span>
+                <span class="copyright"> <div x-data="{ currentYear: new Date().getFullYear() }">
+                    <p>&copy; <span x-text="currentYear"></span> Vqeeh. All rights reserved.</p>
+                  </div></span>
             </div>
         </div>
     </footer>
